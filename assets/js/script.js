@@ -54,3 +54,38 @@ window.addEventListener("scroll", function () {
     goTopBtn.classList.remove("active");
   }
 });
+
+/**
+ * form contact
+ */
+
+const form = document.getElementById("contact-form");
+const loader = document.getElementById("spinner");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  var data = {
+    service_id: 'service_6rhpzpm',
+    template_id: 'template_emxkzhh',
+    user_id: 'Ktdl_UWjJWJLKodrh',
+    template_params: {
+        'userName': form.elements.name.value,
+        'email' :form.elements.email.value,
+        'phoneNumber' :form.elements.phoneNumber.value,
+        'message' : form.elements.message?.value,
+        'g-recaptcha-response': '03AHJ_ASjnLA214KSNKFJAK12sfKASfehbmfd...'
+    }
+};
+loader.style.display = "block";
+  const xhr = new XMLHttpRequest();
+  xhr.open("POST", "https://api.emailjs.com/api/v1.0/email/send");
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.send(JSON.stringify(data));
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      form.reset();
+      alert(`Upload finished successfully.`);
+    }
+    loader.style.display = "none";
+  }
+});
