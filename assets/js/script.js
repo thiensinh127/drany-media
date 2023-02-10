@@ -65,7 +65,7 @@ const loader = document.getElementById("spinner");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   var data = {
-    service_id: 'service_6rhpzpm',
+    services_id: 'services_6rhpzpm',
     template_id: 'template_emxkzhh',
     user_id: 'Ktdl_UWjJWJLKodrh',
     template_params: {
