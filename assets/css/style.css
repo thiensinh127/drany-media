@@ -429,6 +429,13 @@ body {
 /*-----------------------------------*\
   #services
 \*-----------------------------------*/
+
+.services-content{
+  margin-bottom: 30px;
+}
+.services-content .h4{
+  font-size: var(--fs-7);
+}
 .wrap-card {
   display: flex;
   flex-direction: row;
@@ -498,6 +505,13 @@ body {
   margin-block-end: 10px;
 }
 
+#hidden-content{
+  display: none;
+}
+.collapse{
+  margin-top: 30px;
+}
+
 
 /*-----------------------------------*\
   #CONTACT
@@ -520,9 +534,17 @@ label {
   color: var(--chrome-yellow);
   border-radius: 100px;
   cursor: pointer;
-  width: 100%;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
+}
+
+.btn-primary{
+  width: 100%
+}
+
+.btnViewMore{
+  margin: 0 auto;
+  margin-top: 30px;
 }
 
 .btn:hover {
@@ -558,7 +580,6 @@ textarea {
   box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  border-color: var(--white);
 }
 
 .form-group textarea {

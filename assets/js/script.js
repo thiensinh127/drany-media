@@ -89,3 +89,12 @@ loader.style.display = "block";
     loader.style.display = "none";
   }
 });
+
+const viewMoreButton = document.getElementById("view-more-button");
+const hiddenContent = document.getElementById("hidden-content");
+
+viewMoreButton.addEventListener("click", function() {
+  hiddenContent.style.display = "block";
+  viewMoreButton.style.display = "none";
+
+});
